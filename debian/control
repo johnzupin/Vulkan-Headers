@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/KhronosGroup/Vulkan-Headers
 Vcs-Browser: https://github.com/KhronosGroup/Vulkan-Headers
 
 Package: vulkan-headers
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Vulkan header files and API registry

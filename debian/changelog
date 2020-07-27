@@ -1,3 +1,40 @@
+vulkan-headers (1.2.148.0-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.142
+  * Update for Vulkan-Docs 1.2.143
+  * Update for Vulkan-Docs 1.2.144
+  * Update for Vulkan-Docs 1.2.145
+  * Update for Vulkan-Docs 1.2.146
+  * Enumerate originating repository for all files in this repo.
+  * Updates from @mark-lunarg
+
+  [ Nicolas Caramelli ]
+  * Update vk_icd.h for VK_EXT_directfb_surface extension
+
+  [ John Zupin ]
+  * control: update arch to all
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.147
+  * Update for Vulkan-Docs 1.2.148
+
+  [ John Zupin ]
+  * copyright: updated for release
+
+  [ Niklas Haas ]
+  * Fix enum order for backwards compatibility
+
+  [ Lenny Komow ]
+  * Update vk_icd.h with typedefs and prototypes
+  * Update vk_icd.h with proper extern "C" declaration
+  * Add missing ifdef for extern "C"
+
+  [ John Zupin ]
+  * copyright: updated for lunarg debian files
+
+ -- John Zupin <john@odin>  Mon, 27 Jul 2020 16:44:40 -0600
+
 vulkan-headers (1.2.141-1) bionic; urgency=medium
 
   * Initial release

@@ -1,3 +1,13 @@
+vulkan-headers (1.2.148.0-1ubuntu18.04-2) bionic; urgency=medium
+
+  [ John Zupin ]
+  * debian: remove README.Debian
+
+  [ Lenny Komow ]
+  * Add a loader features interface
+
+ -- John Zupin <john@odin>  Fri, 31 Jul 2020 17:04:48 -0600
+
 vulkan-headers (1.2.148.0-1lunarg18.04-1) bionic; urgency=medium
 
   [ Jon Leech ]

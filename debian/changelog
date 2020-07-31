@@ -1,3 +1,13 @@
+vulkan-headers (1.2.148.0-1ubuntu20.04-2) focal; urgency=medium
+
+  [ John Zupin ]
+  * debian: remove README.Debian
+
+  [ Lenny Komow ]
+  * Add a loader features interface
+
+ -- John Zupin <john@odin>  Fri, 31 Jul 2020 17:06:42 -0600
+
 vulkan-headers (1.2.148.0-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

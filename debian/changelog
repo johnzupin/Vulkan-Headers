@@ -1,3 +1,28 @@
+vulkan-headers (1.2.154.0-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.149
+
+  [ Lenny Komow ]
+  * Update vk_icd.h with typedefs and prototypes
+  * Update vk_icd.h with proper extern "C" declaration
+  * Add missing ifdef for extern "C"
+  * Add a loader features interface
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.150
+  * Update for Vulkan-Docs 1.2.151
+
+  [ Michael Chock ]
+  * Add VI WSI platform support to vk_icd.h
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.152
+  * Update for Vulkan-Docs 1.2.153
+  * Update for Vulkan-Docs 1.2.154
+
+ -- John Zupin <john@odin>  Mon, 28 Sep 2020 17:16:39 -0600
+
 vulkan-headers (1.2.148.0-1ubuntu18.04-2) bionic; urgency=medium
 
   [ John Zupin ]

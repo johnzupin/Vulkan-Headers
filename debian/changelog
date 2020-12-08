@@ -1,3 +1,29 @@
+vulkan-headers (1.2.162.0-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.155
+  * Update for Vulkan-Docs 1.2.156
+  * Update for Vulkan-Docs 1.2.157
+  * Update for Vulkan-Docs 1.2.157
+  * Update for Vulkan-Docs 1.2.158
+  * Update for Vulkan-Docs 1.2.159
+  * Update for Vulkan-Docs 1.2.160
+  * Update for Vulkan-Docs 1.2.161
+
+  [ J.D. Rouan ]
+  * Add GGP (Stadia) WSI platform support to vk_icd.h
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.162
+
+  [ Lenny Komow ]
+  * Move GGP in WSI platform enum
+
+  [ John Zupin ]
+  * packaging: update copyright
+
+ -- John Zupin <john@odin>  Tue, 08 Dec 2020 10:55:17 -0700
+
 vulkan-headers (1.2.154.0-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

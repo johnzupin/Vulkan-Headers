@@ -1,3 +1,35 @@
+vulkan-headers (1.2.176.0~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.171
+  * Forgot to add new header.
+
+  [ Yuly Novikov ]
+  * Fix build after adding new header
+
+  [ Mike Gorchak ]
+  * Add support for QNX Screen platform to ICD header.
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.172
+
+  [ John Zupin ]
+  * packaging: update debian/copyright file
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.173
+  * Update for Vulkan-Docs 1.2.174
+  * Update for Vulkan-Docs 1.2.175
+  * Omitted static vk_video/ headers in the 1.2.175 update. This should fix it.
+
+  [ Mike Schuchardt ]
+  * Add vk_video headers to CMake install target
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.176
+
+ -- John Zupin <john@odin>  Tue, 27 Apr 2021 13:46:34 -0600
+
 vulkan-headers (1.2.170.0~rc2-1lunarg18.04-1) bionic; urgency=medium
 
   * packaging: updated LunarG's copyrights

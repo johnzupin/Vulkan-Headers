@@ -1,3 +1,16 @@
+vulkan-headers (1.2.182.0~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.177
+  * Update for Vulkan-Docs 1.2.178
+  * Update for Vulkan-Docs 1.2.179
+  * Update for Vulkan-Docs 1.2.180
+  * Update for Vulkan-Docs 1.2.181
+  * Update for Vulkan-Docs 1.2.182
+  * Add reference to multiple Hpp headers added to this repository
+
+ -- John Zupin <john@odin>  Fri, 25 Jun 2021 14:41:17 -0600
+
 vulkan-headers (1.2.176.0~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Jon Leech ]

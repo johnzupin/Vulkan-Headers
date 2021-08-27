@@ -1,3 +1,16 @@
+vulkan-headers (1.2.189.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.183
+  * Update for Vulkan-Docs 1.2.184
+  * Update for Vulkan-Docs 1.2.185
+  * Update for Vulkan-Docs 1.2.186
+  * Update for Vulkan-Docs 1.2.187
+  * Update for Vulkan-Docs 1.2.188
+  * Update for Vulkan-Docs 1.2.189
+
+ -- John Zupin <john@odin>  Fri, 27 Aug 2021 15:56:15 -0600
+
 vulkan-headers (1.2.182.0~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

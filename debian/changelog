@@ -1,3 +1,26 @@
+vulkan-headers (1.2.198.0~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.190
+  * Update for Vulkan-Docs 1.2.191
+  * Update README to note change of default branch
+  * Update for Vulkan-Docs 1.2.192
+  * Update for Vulkan-Docs 1.2.193
+  * Update for Vulkan-Docs 1.2.194
+  * Update for Vulkan-Docs 1.2.195
+  * Update for Vulkan-Docs 1.2.196
+  * Add missing vulkan_video_codec_h265std_encode.h
+
+  [ Charles Giessen ]
+  * Update issue reference for non-API headers
+  * Fix spelling of querying in vk_icd.h
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.2.197
+  * Update for Vulkan-Docs 1.2.198
+
+ -- John Zupin <john@odin>  Tue, 16 Nov 2021 16:42:36 -0700
+
 vulkan-headers (1.2.189.0~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Jon Leech ]

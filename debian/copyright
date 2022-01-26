@@ -4,12 +4,12 @@ Source: https://github.com/KhronosGroup/Vulkan-Headers
 
 Files: *
 Copyright: 2018-2019, Collabora, Ltd
-           2021, CopyrightLunarG Inc
+           2022, CopyrightLunarG Inc
            2013-2021, The Khronos Group Inc
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2021, LunarG Inc
+Copyright: 2022, LunarG Inc
 License: BSD-3-clause or GPL-3 or MIT
 
 Files: BUILD.gn
@@ -18,7 +18,7 @@ Files: BUILD.gn
        include/vulkan/vk_icd.h
        include/vulkan/vk_layer.h
        include/vulkan/vk_sdk_platform.h
-Copyright: 2015-2019, LunarG, Inc
+Copyright: 2015-2022, LunarG, Inc
            2018-2019, The ANGLE Project Authors
            2015-2017, The Khronos Group Inc
            2015-2018, Valve Corporation

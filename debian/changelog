@@ -1,3 +1,17 @@
+vulkan-headers (1.3.211.0~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.210
+
+  [ Antonio Caggiano ]
+  * GN: Wayland include directories
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.211
+  * Add new file to README
+
+ -- john <john@odin>  Mon, 11 Apr 2022 13:09:41 -0600
+
 vulkan-headers (1.3.209.0~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Jon Leech ]

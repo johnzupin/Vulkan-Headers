@@ -4471,6 +4471,19 @@ namespace std
   };
 
   template <>
+  struct hash<VULKAN_HPP_NAMESPACE::GraphicsPipelineLibraryCreateInfoEXT>
+  {
+    std::size_t operator()( VULKAN_HPP_NAMESPACE::GraphicsPipelineLibraryCreateInfoEXT const & graphicsPipelineLibraryCreateInfoEXT ) const VULKAN_HPP_NOEXCEPT
+    {
+      std::size_t seed = 0;
+      VULKAN_HPP_HASH_COMBINE( seed, graphicsPipelineLibraryCreateInfoEXT.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, graphicsPipelineLibraryCreateInfoEXT.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, graphicsPipelineLibraryCreateInfoEXT.flags );
+      return seed;
+    }
+  };
+
+  template <>
   struct hash<VULKAN_HPP_NAMESPACE::GraphicsShaderGroupCreateInfoNV>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::GraphicsShaderGroupCreateInfoNV const & graphicsShaderGroupCreateInfoNV ) const VULKAN_HPP_NOEXCEPT
@@ -6806,6 +6819,36 @@ namespace std
   };
 
   template <>
+  struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryFeaturesEXT>
+  {
+    std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryFeaturesEXT const & physicalDeviceGraphicsPipelineLibraryFeaturesEXT )
+      const VULKAN_HPP_NOEXCEPT
+    {
+      std::size_t seed = 0;
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryFeaturesEXT.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryFeaturesEXT.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryFeaturesEXT.graphicsPipelineLibrary );
+      return seed;
+    }
+  };
+
+  template <>
+  struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryPropertiesEXT>
+  {
+    std::size_t
+      operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGraphicsPipelineLibraryPropertiesEXT const & physicalDeviceGraphicsPipelineLibraryPropertiesEXT ) const
+      VULKAN_HPP_NOEXCEPT
+    {
+      std::size_t seed = 0;
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryPropertiesEXT.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryPropertiesEXT.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryPropertiesEXT.graphicsPipelineLibraryFastLinking );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceGraphicsPipelineLibraryPropertiesEXT.graphicsPipelineLibraryIndependentInterpolationDecoration );
+      return seed;
+    }
+  };
+
+  template <>
   struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties>
   {
     std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceGroupProperties const & physicalDeviceGroupProperties ) const VULKAN_HPP_NOEXCEPT
@@ -6858,6 +6901,21 @@ namespace std
       }
       VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceIDProperties.deviceNodeMask );
       VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceIDProperties.deviceLUIDValid );
+      return seed;
+    }
+  };
+
+  template <>
+  struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImage2DViewOf3DFeaturesEXT>
+  {
+    std::size_t
+      operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImage2DViewOf3DFeaturesEXT const & physicalDeviceImage2DViewOf3DFeaturesEXT ) const VULKAN_HPP_NOEXCEPT
+    {
+      std::size_t seed = 0;
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImage2DViewOf3DFeaturesEXT.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImage2DViewOf3DFeaturesEXT.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImage2DViewOf3DFeaturesEXT.image2DViewOf3D );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImage2DViewOf3DFeaturesEXT.sampler2DViewOf3D );
       return seed;
     }
   };
@@ -7631,6 +7689,22 @@ namespace std
       VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitiveTopologyListRestartFeaturesEXT.pNext );
       VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitiveTopologyListRestartFeaturesEXT.primitiveTopologyListRestart );
       VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitiveTopologyListRestartFeaturesEXT.primitiveTopologyPatchListRestart );
+      return seed;
+    }
+  };
+
+  template <>
+  struct hash<VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitivesGeneratedQueryFeaturesEXT>
+  {
+    std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDevicePrimitivesGeneratedQueryFeaturesEXT const & physicalDevicePrimitivesGeneratedQueryFeaturesEXT )
+      const VULKAN_HPP_NOEXCEPT
+    {
+      std::size_t seed = 0;
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitivesGeneratedQueryFeaturesEXT.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitivesGeneratedQueryFeaturesEXT.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitivesGeneratedQueryFeaturesEXT.primitivesGeneratedQuery );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitivesGeneratedQueryFeaturesEXT.primitivesGeneratedQueryWithRasterizerDiscard );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalDevicePrimitivesGeneratedQueryFeaturesEXT.primitivesGeneratedQueryWithNonZeroStreams );
       return seed;
     }
   };
@@ -11650,8 +11724,6 @@ namespace std
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.sType );
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.pNext );
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.flags );
-      VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.codedOffset );
-      VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.codedExtent );
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.srcBuffer );
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.srcBufferOffset );
       VULKAN_HPP_HASH_COMBINE( seed, videoDecodeInfoKHR.srcBufferRange );
@@ -12186,7 +12258,6 @@ namespace std
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.pNext );
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.flags );
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.qualityLevel );
-      VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.codedExtent );
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.dstBitstreamBuffer );
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.dstBitstreamBufferOffset );
       VULKAN_HPP_HASH_COMBINE( seed, videoEncodeInfoKHR.dstBitstreamBufferMaxRange );

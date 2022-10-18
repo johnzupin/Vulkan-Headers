@@ -1,3 +1,16 @@
+vulkan-headers (1.3.231.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.225
+  * Update for Vulkan-Docs 1.3.226
+  * Update for Vulkan-Docs 1.3.227
+  * Update for Vulkan-Docs 1.3.228
+  * Update for Vulkan-Docs 1.3.229
+  * Update for Vulkan-Docs 1.3.230
+  * Update for Vulkan-Docs 1.3.231
+
+ -- john <john@odin>  Tue, 18 Oct 2022 11:20:02 -0600
+
 vulkan-headers (1.3.224.0~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

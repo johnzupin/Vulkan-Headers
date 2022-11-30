@@ -1,3 +1,39 @@
+vulkan-headers (1.3.235.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.232 and add profile JSON under registry/profiles/
+  * Update for Vulkan-Docs 1.3.233
+  * Update reporting for non-API headers
+
+  [ Juan Ramos ]
+  * build: Fix CMake warning
+  * cmake: Get Vulkan Version
+  * includes: Guard against multiple NOMINMAX
+  * cmake: Export CMake Targets File
+  * cmake: Add VULKAN_HEADERS_INSTALL option
+  * cmake: Update BUILD.md documentation
+  * docs: Remove .cmake-format.py
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.234
+
+  [ Ryan Harrison ]
+  * Fix duplicate quotes when targets are included by downstream projects
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.235
+
+  [ John Bauman ]
+  * Add VkIcdSurfaceImagePipe and VK_ICD_WSI_PLATFORM_FUCHSIA
+
+  [ Timo Gurr ]
+  * cmake: Fix environment for cross-compile installs
+
+  [ John Zupin ]
+  * packaging: update
+
+ -- john <john@odin>  Wed, 30 Nov 2022 12:45:38 -0700
+
 vulkan-headers (1.3.231.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

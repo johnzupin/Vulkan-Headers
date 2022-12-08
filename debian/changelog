@@ -1,3 +1,16 @@
+vulkan-headers (1.3.236.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.236
+
+  [ Juan Ramos ]
+  * cmake: Fix cross-compilation
+
+  [ unknown ]
+  * vk_icd.h: Add ICD Version 7
+
+ -- john <john@odin>  Thu, 08 Dec 2022 12:20:16 -0700
+
 vulkan-headers (1.3.235.0~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

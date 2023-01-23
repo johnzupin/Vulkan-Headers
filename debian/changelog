@@ -1,3 +1,48 @@
+vulkan-headers (1.3.239.0~rc2-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.237
+
+  [ Juan Ramos ]
+  * cmake: Cleanup CMake code
+  * cmake: Remove VULKAN_HEADERS_INSTALL
+  * cmake: Remove Copyright_cmake.txt
+  * cmake: Preserve permissions from registry files
+  * ci: Add GitHub actions
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.238
+
+  [ Juan Ramos ]
+  * docs: INTEGRATION.md
+  * ci: Fix GitHub action bug
+  * tests: Test Non-API headers
+  * vk_layer: Include vukan_core.h instead of vulkan.h
+  * cxx: Use pragma once consistently for non-api headers
+  * gn: Fix GN build warnings
+  * docs: Update copyright
+  * Deprecate vk_sdk_platform.h
+  * cmake: Remove Vulkan::Registry
+  * docs: Minimal BUILD.md documentation
+  * cmake: Cleanup vlk_get_header_version
+  * ci: Test find_package support
+  * docs: Update BUILD.md
+  * cmake: Removes unused CMake macros
+  * docs: Streamline CMake docs
+  * cmake: Cleanup vlk_get_header_version function
+  * docs: Add CONTRIBUTING.md
+  * docs: Update README.md
+  * ci: Test CMake minimum
+  * ci: Cleanup linux.yml
+
+  [ John Zupin ]
+  * packaging: debian: update copyright
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.239
+
+ -- john <john@odin>  Mon, 23 Jan 2023 14:55:49 -0700
+
 vulkan-headers (1.3.236.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

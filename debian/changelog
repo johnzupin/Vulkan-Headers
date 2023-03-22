@@ -1,3 +1,41 @@
+vulkan-headers (1.3.243.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Juan Ramos ]
+  * build: Remove vk_sdk_platform.h
+  * ci: Don't re-install CMake
+  * docs: Remove un-neccessary detail from docs
+  * cmake: Update minimum to 3.14
+  * docs: Re-add documentation
+  * github: Update bug_report.md
+  * github: Add PR template
+  * docs: Improve github templates
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.240
+
+  [ Juan Ramos ]
+  * docs: Trim README.md
+  * cmake: Trim CMakeLists.txt
+  * headers: Remove VK_LAYER_EXPORT
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.241
+
+  [ Mike Schuchardt ]
+  * Add -Wno-redundant-parens to BUILD.gn
+
+  [ Juan Ramos ]
+  * cmake: Update min to 3.15
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.242
+  * Update for Vulkan-Docs 1.3.243
+
+  [ Juan Ramos ]
+  * cmake: Minor CMake cleanup
+
+ -- john <john@odin>  Wed, 22 Mar 2023 10:18:47 -0600
+
 vulkan-headers (1.3.239.0~rc2-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

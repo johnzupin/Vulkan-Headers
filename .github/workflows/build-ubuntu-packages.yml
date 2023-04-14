@@ -1,0 +1,60 @@
+name: build-ubuntu-packages
+run-name: Build Debian style packages for Ubuntu distros
+on:
+  push:
+  workflow_call:
+    inputs:
+      vh:
+        required: true
+        type: string
+        default: '{"repo":"johnzupin/Vulkan-Headers","ref":"ubuntu/focal"}'
+        description: "A json string that defines repo and ref. Ex) {repo:KhronosGroup/SPIRV-Headers, ref:ubuntu/focal}"
+  workflow_dispatch:
+    inputs:
+      vh:
+        required: true
+        type: string
+        default: '{"repo":"johnzupin/Vulkan-Headers","ref":"ubuntu/focal"}'
+        description: "A json string that defines repo and ref. Ex) {repo:KhronosGroup/SPIRV-Headers, ref:ubuntu/focal}"
+
+jobs:
+  build-vulkan-headers-focal-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "No inputs specified - build what was triggered"
+        if: ${{ inputs.vh == '' }}
+        run: |
+          echo "Inputs not specified - Running as a push event"
+          echo "VH_REPO=$GITHUB_REPOSITORY" >> "$GITHUB_ENV"
+          echo "VH_REF=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+      - name: "Set repo/ref variables with specified input"
+        if: ${{ inputs.vh != '' }}
+        run: |
+          echo "Inputs are specified - Running a reusable or dispatch call"
+          echo "VH_REPO=${{ fromJSON(inputs.vh).repo }}" >> "$GITHUB_ENV"
+          echo "VH_REF=${{ fromJSON(inputs.vh).ref }}" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build-vulkan-headers-focal-package
+        with:
+          repo: "${{ env.VH_REPO }}"
+          ref: "${{ env.VH_REF }}"
+  build-vulkan-headers-jammy-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "No inputs specified - build what was triggered"
+        if: ${{ inputs.vh == '' }}
+        run: |
+          echo "Inputs not specified - Running as a push event"
+          echo "VH_REPO=$GITHUB_REPOSITORY" >> "$GITHUB_ENV"
+          echo "VH_REF=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+      - name: "Set repo/ref variables with specified input"
+        if: ${{ inputs.vh != '' }}
+        run: |
+          echo "Inputs are specified - Running a reusable or dispatch call"
+          echo "VH_REPO=${{ fromJSON(inputs.vh).repo }}" >> "$GITHUB_ENV"
+          echo "VH_REF=${{ fromJSON(inputs.vh).ref }}" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build-vulkan-headers-jammy-package
+        with:
+          repo: "${{ env.VH_REPO }}"
+          ref: "${{ env.VH_REF }}"

@@ -1,3 +1,43 @@
+vulkan-headers (1.3.261.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.251
+  * Update for Vulkan-Docs 1.3.252
+  * Update for Vulkan-Docs 1.3.253
+  * Update for Vulkan-Docs 1.3.254
+  * Update for Vulkan-Docs 1.3.255
+  * Update README to be more clear about use of the different files in the repo
+  * Update for Vulkan-Docs 1.3.256
+  * Add new .cppm file to CONTRIBUTING.md
+
+  [ Juan Ramos ]
+  * cmake: Add VULKAN_HEADERS_INSTALL option
+  * cmake: Remove usage of configure_package_config_file
+  * cmake: Remove VULKAN_HEADERS_INSTALL
+  * docs: Remove outdated documentation referencing `cmake/`
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.257
+
+  [ Juan Ramos ]
+  * cmake: Use share instead of DATADIR for CMake config files
+  * Add REUSE compliance checker to CI
+  * ci: Add Windows to CI
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.258
+  * Update for Vulkan-Docs 1.3.259
+  * Update for Vulkan-Docs 1.3.260
+  * Update CoC link
+  * Use MIT license
+  * Update for Vulkan-Docs 1.3.261
+
+  [ Juan Ramos ]
+  * Create SECURITY.md
+  * reuse: Cleanup copyright for *.md files
+
+ -- john <john@odin>  Wed, 16 Aug 2023 08:24:00 -0600
+
 vulkan-headers (1.3.250.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

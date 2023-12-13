@@ -2964,6 +2964,16 @@ VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::XYColorEXT ) == sizeof( 
 VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::XYColorEXT>::value, "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::XYColorEXT>::value, "XYColorEXT is not nothrow_move_constructible!" );
 
+//=== VK_IMG_relaxed_line_rasterization ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceRelaxedLineRasterizationFeaturesIMG ) ==
+                            sizeof( VkPhysicalDeviceRelaxedLineRasterizationFeaturesIMG ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceRelaxedLineRasterizationFeaturesIMG>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceRelaxedLineRasterizationFeaturesIMG>::value,
+                          "PhysicalDeviceRelaxedLineRasterizationFeaturesIMG is not nothrow_move_constructible!" );
+
 //=== VK_KHR_shared_presentable_image ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SharedPresentSurfaceCapabilitiesKHR ) == sizeof( VkSharedPresentSurfaceCapabilitiesKHR ),
@@ -3903,14 +3913,6 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Pipeline
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PipelineCompilerControlCreateInfoAMD>::value,
                           "PipelineCompilerControlCreateInfoAMD is not nothrow_move_constructible!" );
 
-//=== VK_EXT_calibrated_timestamps ===
-
-VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoEXT ) == sizeof( VkCalibratedTimestampInfoEXT ),
-                          "struct and wrapper have different size!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoEXT>::value, "struct wrapper is not a standard layout!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoEXT>::value,
-                          "CalibratedTimestampInfoEXT is not nothrow_move_constructible!" );
-
 //=== VK_AMD_shader_core_properties ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCorePropertiesAMD ) == sizeof( VkPhysicalDeviceShaderCorePropertiesAMD ),
@@ -4003,29 +4005,6 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesEXT>::value,
                           "PhysicalDeviceVertexAttributeDivisorPropertiesEXT is not nothrow_move_constructible!" );
-
-VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionEXT ) == sizeof( VkVertexInputBindingDivisorDescriptionEXT ),
-                          "struct and wrapper have different size!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionEXT>::value,
-                          "struct wrapper is not a standard layout!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionEXT>::value,
-                          "VertexInputBindingDivisorDescriptionEXT is not nothrow_move_constructible!" );
-
-VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoEXT ) ==
-                            sizeof( VkPipelineVertexInputDivisorStateCreateInfoEXT ),
-                          "struct and wrapper have different size!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoEXT>::value,
-                          "struct wrapper is not a standard layout!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoEXT>::value,
-                          "PipelineVertexInputDivisorStateCreateInfoEXT is not nothrow_move_constructible!" );
-
-VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesEXT ) ==
-                            sizeof( VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT ),
-                          "struct and wrapper have different size!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesEXT>::value,
-                          "struct wrapper is not a standard layout!" );
-VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesEXT>::value,
-                          "PhysicalDeviceVertexAttributeDivisorFeaturesEXT is not nothrow_move_constructible!" );
 
 #if defined( VK_USE_PLATFORM_GGP )
 //=== VK_GGP_frame_token ===
@@ -5122,6 +5101,48 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::DeviceDi
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::DeviceDiagnosticsConfigCreateInfoNV>::value,
                           "DeviceDiagnosticsConfigCreateInfoNV is not nothrow_move_constructible!" );
 
+#if defined( VK_ENABLE_BETA_EXTENSIONS )
+//=== VK_NV_cuda_kernel_launch ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CudaModuleNV ) == sizeof( VkCudaModuleNV ), "handle and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CudaModuleNV>::value, "CudaModuleNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CudaFunctionNV ) == sizeof( VkCudaFunctionNV ), "handle and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CudaFunctionNV>::value,
+                          "CudaFunctionNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV ) == sizeof( VkCudaModuleCreateInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CudaModuleCreateInfoNV>::value,
+                          "CudaModuleCreateInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV ) == sizeof( VkCudaFunctionCreateInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CudaFunctionCreateInfoNV>::value,
+                          "CudaFunctionCreateInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV ) == sizeof( VkCudaLaunchInfoNV ), "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CudaLaunchInfoNV>::value,
+                          "CudaLaunchInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchFeaturesNV ) == sizeof( VkPhysicalDeviceCudaKernelLaunchFeaturesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchFeaturesNV>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchFeaturesNV>::value,
+                          "PhysicalDeviceCudaKernelLaunchFeaturesNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchPropertiesNV ) == sizeof( VkPhysicalDeviceCudaKernelLaunchPropertiesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchPropertiesNV>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceCudaKernelLaunchPropertiesNV>::value,
+                          "PhysicalDeviceCudaKernelLaunchPropertiesNV is not nothrow_move_constructible!" );
+#endif /*VK_ENABLE_BETA_EXTENSIONS*/
+
 //=== VK_NV_low_latency ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::QueryLowLatencySupportNV ) == sizeof( VkQueryLowLatencySupportNV ),
@@ -5882,6 +5903,20 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelinePropertiesFeaturesEXT>::value,
                           "PhysicalDevicePipelinePropertiesFeaturesEXT is not nothrow_move_constructible!" );
 
+//=== VK_EXT_frame_boundary ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceFrameBoundaryFeaturesEXT ) == sizeof( VkPhysicalDeviceFrameBoundaryFeaturesEXT ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceFrameBoundaryFeaturesEXT>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceFrameBoundaryFeaturesEXT>::value,
+                          "PhysicalDeviceFrameBoundaryFeaturesEXT is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::FrameBoundaryEXT ) == sizeof( VkFrameBoundaryEXT ), "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::FrameBoundaryEXT>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::FrameBoundaryEXT>::value,
+                          "FrameBoundaryEXT is not nothrow_move_constructible!" );
+
 //=== VK_EXT_multisampled_render_to_single_sampled ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT ) ==
@@ -6156,6 +6191,14 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderPropertiesHUAWEI>::value,
                           "PhysicalDeviceClusterCullingShaderPropertiesHUAWEI is not nothrow_move_constructible!" );
 
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI ) ==
+                            sizeof( VkPhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI>::value,
+                          "PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI is not nothrow_move_constructible!" );
+
 //=== VK_EXT_border_color_swizzle ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceBorderColorSwizzleFeaturesEXT ) ==
@@ -6192,6 +6235,31 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceShaderCorePropertiesARM>::value,
                           "PhysicalDeviceShaderCorePropertiesARM is not nothrow_move_constructible!" );
+
+//=== VK_ARM_scheduling_controls ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::DeviceQueueShaderCoreControlCreateInfoARM ) == sizeof( VkDeviceQueueShaderCoreControlCreateInfoARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::DeviceQueueShaderCoreControlCreateInfoARM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::DeviceQueueShaderCoreControlCreateInfoARM>::value,
+                          "DeviceQueueShaderCoreControlCreateInfoARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsFeaturesARM ) ==
+                            sizeof( VkPhysicalDeviceSchedulingControlsFeaturesARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsFeaturesARM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsFeaturesARM>::value,
+                          "PhysicalDeviceSchedulingControlsFeaturesARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsPropertiesARM ) ==
+                            sizeof( VkPhysicalDeviceSchedulingControlsPropertiesARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsPropertiesARM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceSchedulingControlsPropertiesARM>::value,
+                          "PhysicalDeviceSchedulingControlsPropertiesARM is not nothrow_move_constructible!" );
 
 //=== VK_EXT_image_sliced_view_of_3d ===
 
@@ -6251,6 +6319,41 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceNonSeamlessCubeMapFeaturesEXT>::value,
                           "PhysicalDeviceNonSeamlessCubeMapFeaturesEXT is not nothrow_move_constructible!" );
+
+//=== VK_ARM_render_pass_striped ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedFeaturesARM ) == sizeof( VkPhysicalDeviceRenderPassStripedFeaturesARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedFeaturesARM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedFeaturesARM>::value,
+                          "PhysicalDeviceRenderPassStripedFeaturesARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedPropertiesARM ) ==
+                            sizeof( VkPhysicalDeviceRenderPassStripedPropertiesARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedPropertiesARM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceRenderPassStripedPropertiesARM>::value,
+                          "PhysicalDeviceRenderPassStripedPropertiesARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::RenderPassStripeBeginInfoARM ) == sizeof( VkRenderPassStripeBeginInfoARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::RenderPassStripeBeginInfoARM>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::RenderPassStripeBeginInfoARM>::value,
+                          "RenderPassStripeBeginInfoARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::RenderPassStripeInfoARM ) == sizeof( VkRenderPassStripeInfoARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::RenderPassStripeInfoARM>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::RenderPassStripeInfoARM>::value,
+                          "RenderPassStripeInfoARM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::RenderPassStripeSubmitInfoARM ) == sizeof( VkRenderPassStripeSubmitInfoARM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::RenderPassStripeSubmitInfoARM>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::RenderPassStripeSubmitInfoARM>::value,
+                          "RenderPassStripeSubmitInfoARM is not nothrow_move_constructible!" );
 
 //=== VK_QCOM_fragment_density_map_offset ===
 
@@ -6404,6 +6507,24 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessingPropertiesQCOM>::value,
                           "PhysicalDeviceImageProcessingPropertiesQCOM is not nothrow_move_constructible!" );
+
+//=== VK_EXT_nested_command_buffer ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferFeaturesEXT ) ==
+                            sizeof( VkPhysicalDeviceNestedCommandBufferFeaturesEXT ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferFeaturesEXT>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferFeaturesEXT>::value,
+                          "PhysicalDeviceNestedCommandBufferFeaturesEXT is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferPropertiesEXT ) ==
+                            sizeof( VkPhysicalDeviceNestedCommandBufferPropertiesEXT ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferPropertiesEXT>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceNestedCommandBufferPropertiesEXT>::value,
+                          "PhysicalDeviceNestedCommandBufferPropertiesEXT is not nothrow_move_constructible!" );
 
 //=== VK_EXT_external_memory_acquire_unmodified ===
 
@@ -6613,6 +6734,34 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDevicePipelineProtectedAccessFeaturesEXT>::value,
                           "PhysicalDevicePipelineProtectedAccessFeaturesEXT is not nothrow_move_constructible!" );
 
+#if defined( VK_USE_PLATFORM_ANDROID_KHR )
+//=== VK_ANDROID_external_format_resolve ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolveFeaturesANDROID ) ==
+                            sizeof( VkPhysicalDeviceExternalFormatResolveFeaturesANDROID ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolveFeaturesANDROID>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolveFeaturesANDROID>::value,
+                          "PhysicalDeviceExternalFormatResolveFeaturesANDROID is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolvePropertiesANDROID ) ==
+                            sizeof( VkPhysicalDeviceExternalFormatResolvePropertiesANDROID ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolvePropertiesANDROID>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalFormatResolvePropertiesANDROID>::value,
+                          "PhysicalDeviceExternalFormatResolvePropertiesANDROID is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatResolvePropertiesANDROID ) ==
+                            sizeof( VkAndroidHardwareBufferFormatResolvePropertiesANDROID ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatResolvePropertiesANDROID>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::AndroidHardwareBufferFormatResolvePropertiesANDROID>::value,
+                          "AndroidHardwareBufferFormatResolvePropertiesANDROID is not nothrow_move_constructible!" );
+#endif /*VK_USE_PLATFORM_ANDROID_KHR*/
+
 //=== VK_KHR_maintenance5 ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceMaintenance5FeaturesKHR ) == sizeof( VkPhysicalDeviceMaintenance5FeaturesKHR ),
@@ -6754,6 +6903,24 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceRayTracingInvocationReorderFeaturesNV>::value,
                           "PhysicalDeviceRayTracingInvocationReorderFeaturesNV is not nothrow_move_constructible!" );
 
+//=== VK_NV_extended_sparse_address_space ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV ) ==
+                            sizeof( VkPhysicalDeviceExtendedSparseAddressSpaceFeaturesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV>::value,
+                          "PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpacePropertiesNV ) ==
+                            sizeof( VkPhysicalDeviceExtendedSparseAddressSpacePropertiesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpacePropertiesNV>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceExtendedSparseAddressSpacePropertiesNV>::value,
+                          "PhysicalDeviceExtendedSparseAddressSpacePropertiesNV is not nothrow_move_constructible!" );
+
 //=== VK_EXT_mutable_descriptor_type ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceMutableDescriptorTypeFeaturesEXT ) ==
@@ -6776,6 +6943,19 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::MutableD
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::MutableDescriptorTypeCreateInfoEXT>::value,
                           "MutableDescriptorTypeCreateInfoEXT is not nothrow_move_constructible!" );
+
+//=== VK_EXT_layer_settings ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LayerSettingsCreateInfoEXT ) == sizeof( VkLayerSettingsCreateInfoEXT ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LayerSettingsCreateInfoEXT>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LayerSettingsCreateInfoEXT>::value,
+                          "LayerSettingsCreateInfoEXT is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LayerSettingEXT ) == sizeof( VkLayerSettingEXT ), "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LayerSettingEXT>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LayerSettingEXT>::value,
+                          "LayerSettingEXT is not nothrow_move_constructible!" );
 
 //=== VK_ARM_shader_core_builtins ===
 
@@ -6814,6 +6994,61 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT>::value,
                           "PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT is not nothrow_move_constructible!" );
+
+//=== VK_NV_low_latency2 ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV ) == sizeof( VkLatencySleepModeInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LatencySleepModeInfoNV>::value,
+                          "LatencySleepModeInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LatencySleepInfoNV ) == sizeof( VkLatencySleepInfoNV ), "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LatencySleepInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LatencySleepInfoNV>::value,
+                          "LatencySleepInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV ) == sizeof( VkSetLatencyMarkerInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::SetLatencyMarkerInfoNV>::value,
+                          "SetLatencyMarkerInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV ) == sizeof( VkGetLatencyMarkerInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::GetLatencyMarkerInfoNV>::value,
+                          "GetLatencyMarkerInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LatencyTimingsFrameReportNV ) == sizeof( VkLatencyTimingsFrameReportNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LatencyTimingsFrameReportNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LatencyTimingsFrameReportNV>::value,
+                          "LatencyTimingsFrameReportNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LatencySubmissionPresentIdNV ) == sizeof( VkLatencySubmissionPresentIdNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LatencySubmissionPresentIdNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LatencySubmissionPresentIdNV>::value,
+                          "LatencySubmissionPresentIdNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SwapchainLatencyCreateInfoNV ) == sizeof( VkSwapchainLatencyCreateInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::SwapchainLatencyCreateInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::SwapchainLatencyCreateInfoNV>::value,
+                          "SwapchainLatencyCreateInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV ) == sizeof( VkOutOfBandQueueTypeInfoNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::OutOfBandQueueTypeInfoNV>::value,
+                          "OutOfBandQueueTypeInfoNV is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::LatencySurfaceCapabilitiesNV ) == sizeof( VkLatencySurfaceCapabilitiesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::LatencySurfaceCapabilitiesNV>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::LatencySurfaceCapabilitiesNV>::value,
+                          "LatencySurfaceCapabilitiesNV is not nothrow_move_constructible!" );
 
 //=== VK_KHR_cooperative_matrix ===
 
@@ -6856,6 +7091,77 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Multivie
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::MultiviewPerViewRenderAreasRenderPassBeginInfoQCOM>::value,
                           "MultiviewPerViewRenderAreasRenderPassBeginInfoQCOM is not nothrow_move_constructible!" );
 
+//=== VK_QCOM_image_processing2 ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2FeaturesQCOM ) == sizeof( VkPhysicalDeviceImageProcessing2FeaturesQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2FeaturesQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2FeaturesQCOM>::value,
+                          "PhysicalDeviceImageProcessing2FeaturesQCOM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2PropertiesQCOM ) ==
+                            sizeof( VkPhysicalDeviceImageProcessing2PropertiesQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2PropertiesQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageProcessing2PropertiesQCOM>::value,
+                          "PhysicalDeviceImageProcessing2PropertiesQCOM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SamplerBlockMatchWindowCreateInfoQCOM ) == sizeof( VkSamplerBlockMatchWindowCreateInfoQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::SamplerBlockMatchWindowCreateInfoQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::SamplerBlockMatchWindowCreateInfoQCOM>::value,
+                          "SamplerBlockMatchWindowCreateInfoQCOM is not nothrow_move_constructible!" );
+
+//=== VK_QCOM_filter_cubic_weights ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicWeightsFeaturesQCOM ) == sizeof( VkPhysicalDeviceCubicWeightsFeaturesQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicWeightsFeaturesQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicWeightsFeaturesQCOM>::value,
+                          "PhysicalDeviceCubicWeightsFeaturesQCOM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SamplerCubicWeightsCreateInfoQCOM ) == sizeof( VkSamplerCubicWeightsCreateInfoQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::SamplerCubicWeightsCreateInfoQCOM>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::SamplerCubicWeightsCreateInfoQCOM>::value,
+                          "SamplerCubicWeightsCreateInfoQCOM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::BlitImageCubicWeightsInfoQCOM ) == sizeof( VkBlitImageCubicWeightsInfoQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::BlitImageCubicWeightsInfoQCOM>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::BlitImageCubicWeightsInfoQCOM>::value,
+                          "BlitImageCubicWeightsInfoQCOM is not nothrow_move_constructible!" );
+
+//=== VK_QCOM_ycbcr_degamma ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcrDegammaFeaturesQCOM ) == sizeof( VkPhysicalDeviceYcbcrDegammaFeaturesQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcrDegammaFeaturesQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceYcbcrDegammaFeaturesQCOM>::value,
+                          "PhysicalDeviceYcbcrDegammaFeaturesQCOM is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM ) ==
+                            sizeof( VkSamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM>::value,
+                          "SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM is not nothrow_move_constructible!" );
+
+//=== VK_QCOM_filter_cubic_clamp ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicClampFeaturesQCOM ) == sizeof( VkPhysicalDeviceCubicClampFeaturesQCOM ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicClampFeaturesQCOM>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceCubicClampFeaturesQCOM>::value,
+                          "PhysicalDeviceCubicClampFeaturesQCOM is not nothrow_move_constructible!" );
+
 //=== VK_EXT_attachment_feedback_loop_dynamic_state ===
 
 VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT ) ==
@@ -6865,6 +7171,39 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
                           "struct wrapper is not a standard layout!" );
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT>::value,
                           "PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT is not nothrow_move_constructible!" );
+
+//=== VK_KHR_vertex_attribute_divisor ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesKHR ) ==
+                            sizeof( VkPhysicalDeviceVertexAttributeDivisorPropertiesKHR ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesKHR>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorPropertiesKHR>::value,
+                          "PhysicalDeviceVertexAttributeDivisorPropertiesKHR is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionKHR ) == sizeof( VkVertexInputBindingDivisorDescriptionKHR ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionKHR>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::VertexInputBindingDivisorDescriptionKHR>::value,
+                          "VertexInputBindingDivisorDescriptionKHR is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoKHR ) ==
+                            sizeof( VkPipelineVertexInputDivisorStateCreateInfoKHR ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoKHR>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PipelineVertexInputDivisorStateCreateInfoKHR>::value,
+                          "PipelineVertexInputDivisorStateCreateInfoKHR is not nothrow_move_constructible!" );
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesKHR ) ==
+                            sizeof( VkPhysicalDeviceVertexAttributeDivisorFeaturesKHR ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesKHR>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceVertexAttributeDivisorFeaturesKHR>::value,
+                          "PhysicalDeviceVertexAttributeDivisorFeaturesKHR is not nothrow_move_constructible!" );
 
 #if defined( VK_USE_PLATFORM_SCREEN_QNX )
 //=== VK_QNX_external_memory_screen_buffer ===
@@ -6900,5 +7239,32 @@ VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::Physical
 VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX>::value,
                           "PhysicalDeviceExternalMemoryScreenBufferFeaturesQNX is not nothrow_move_constructible!" );
 #endif /*VK_USE_PLATFORM_SCREEN_QNX*/
+
+//=== VK_MSFT_layered_driver ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredDriverPropertiesMSFT ) == sizeof( VkPhysicalDeviceLayeredDriverPropertiesMSFT ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredDriverPropertiesMSFT>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceLayeredDriverPropertiesMSFT>::value,
+                          "PhysicalDeviceLayeredDriverPropertiesMSFT is not nothrow_move_constructible!" );
+
+//=== VK_KHR_calibrated_timestamps ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR ) == sizeof( VkCalibratedTimestampInfoKHR ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR>::value, "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::CalibratedTimestampInfoKHR>::value,
+                          "CalibratedTimestampInfoKHR is not nothrow_move_constructible!" );
+
+//=== VK_NV_descriptor_pool_overallocation ===
+
+VULKAN_HPP_STATIC_ASSERT( sizeof( VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorPoolOverallocationFeaturesNV ) ==
+                            sizeof( VkPhysicalDeviceDescriptorPoolOverallocationFeaturesNV ),
+                          "struct and wrapper have different size!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_standard_layout<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorPoolOverallocationFeaturesNV>::value,
+                          "struct wrapper is not a standard layout!" );
+VULKAN_HPP_STATIC_ASSERT( std::is_nothrow_move_constructible<VULKAN_HPP_NAMESPACE::PhysicalDeviceDescriptorPoolOverallocationFeaturesNV>::value,
+                          "PhysicalDeviceDescriptorPoolOverallocationFeaturesNV is not nothrow_move_constructible!" );
 
 #endif

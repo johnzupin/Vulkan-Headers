@@ -1,3 +1,66 @@
+vulkan-headers (1.3.273.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.262
+
+  [ Juan Ramos ]
+  * cmake: Document vlk_get_header_version
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.263
+  * Update for Vulkan-Docs 1.3.264
+  * Add new .hpp file
+  * Update for Vulkan-Docs 1.3.265
+  * Update for Vulkan-Docs 1.3.266
+
+  [ Juan Ramos ]
+  * docs: New SDK branch convention
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.267
+
+  [ Juan Ramos ]
+  * ci: Fix -Wdeprecated-non-prototype warnings
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.268
+
+  [ Juan Ramos ]
+  * ci: Add dependabot
+  * ci: Prevent duplicate CI runs
+
+  [ dependabot[bot] ]
+  * build(deps): bump actions/checkout from 3 to 4
+
+  [ dependabot[bot] ]
+  * build(deps): bump fsfe/reuse-action from 1 to 2
+  * ci: Fix fork development
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.269
+  * Remove genvk.py from Vulkan-Headers
+
+  [ Juan Ramos ]
+  * docs: Remove INTEGRATION.md
+  * gn: Fix validation layer build
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.270
+
+  [ Juan Ramos ]
+  * ci cleanup
+  * Use ctest for integration testing
+  * ci: Use matrix.cmake-version
+  * Fix testing for 3.15
+  * cmake: Fix integration.install for multi config generators
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.271
+  * Update for Vulkan-Docs 1.3.272
+  * Update for Vulkan-Docs 1.3.273
+
+ -- john <john@odin>  Wed, 13 Dec 2023 13:07:58 -0700
+
 vulkan-headers (1.3.261.0~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Jon Leech ]

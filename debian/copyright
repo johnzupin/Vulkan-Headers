@@ -9,7 +9,7 @@ Copyright: 2018-2019, Collabora, Ltd
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2022, LunarG Inc
+Copyright: 2024, LunarG Inc
 License: BSD-3-clause or GPL-3 or MIT
 
 Files: BUILD.gn

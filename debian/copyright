@@ -58,7 +58,7 @@ Copyright: 2000-2018, Kitware, Inc
 License: BSD-3-clause
 
 Files: debian/*
-Copyright: 2023, LunarG Inc <johnz@lunarg.com>
+Copyright: 2024, LunarG Inc <johnz@lunarg.com>
 License: BSD-3-clause or GPL-3 or MIT
 
 License: Apache-2

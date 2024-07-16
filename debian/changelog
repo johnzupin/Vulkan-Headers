@@ -1,3 +1,45 @@
+vulkan-headers (1.3.290.0~rc1-1lunarg24.04-1) noble; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.284
+  * Update for Vulkan-Docs 1.3.285
+  * Update for Vulkan-Docs 1.3.286
+  * Update for Vulkan-Docs 1.3.287
+  * Update for Vulkan-Docs 1.3.288
+
+  [ David Neto ]
+  * cmake: Allow external control of whether to test or install
+
+  [ Sharadh Rajaraman ]
+  * Add `vulkan.cppm` as a separate library: `Vulkan::VulkanHppModule`
+
+  [ Charles Giessen ]
+  * ci: Add install step
+  * cmake: Remove explicit install of Vulkan-Module
+  * ci: Add explicit build step
+  * cmake: Workaround MSVC module support compiler bug
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.289
+  * Makefile to import generated scripts and headers when doing a spec update
+  * Change name of update to Makefile.release
+
+  [ dependabot[bot] ]
+  * build(deps): bump fsfe/reuse-action from 3 to 4
+
+  [ Charles Giessen ]
+  * build: Require MSVC 17.11 for module support
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.290
+
+  [ Charles Giessen ]
+  * Add windows clang & clang-cl CI jobs
+  * Disable VulkanHppModule support in clang-cl
+  * cmake: Disable modules if clang-scan-deps is missing
+
+ -- john <john@odin>  Tue, 16 Jul 2024 11:31:13 -0600
+
 vulkan-headers (1.3.283.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

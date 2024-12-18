@@ -5,57 +5,46 @@ Source: https://github.com/KhronosGroup/Vulkan-Headers
 Files: *
 Copyright: 2015-2022, LunarG, Inc
            2018-2019, The ANGLE Project Authors
-           2015-2022, The Khronos Group Inc
+           2015-2024, The Khronos Group Inc
            2015-2022, Valve Corporation
 License: Apache-2 or Apache-2.0
 
-Files: cmake/version.cmake
-       include/vk_video/*
-       include/vulkan/vk_platform.h
-       include/vulkan/vulkan.h
-       include/vulkan/vulkan.hpp
-       include/vulkan/vulkan_android.h
-       include/vulkan/vulkan_beta.h
-       include/vulkan/vulkan_core.h
-       include/vulkan/vulkan_directfb.h
-       include/vulkan/vulkan_enums.hpp
-       include/vulkan/vulkan_format_traits.hpp
-       include/vulkan/vulkan_fuchsia.h
-       include/vulkan/vulkan_funcs.hpp
-       include/vulkan/vulkan_ggp.h
-       include/vulkan/vulkan_handles.hpp
-       include/vulkan/vulkan_hash.hpp
-       include/vulkan/vulkan_ios.h
-       include/vulkan/vulkan_macos.h
-       include/vulkan/vulkan_metal.h
-       include/vulkan/vulkan_raii.hpp
-       include/vulkan/vulkan_screen.h
-       include/vulkan/vulkan_static_assertions.hpp
-       include/vulkan/vulkan_structs.hpp
-       include/vulkan/vulkan_to_string.hpp
-       include/vulkan/vulkan_vi.h
-       include/vulkan/vulkan_wayland.h
-       include/vulkan/vulkan_win32.h
-       include/vulkan/vulkan_xcb.h
-       include/vulkan/vulkan_xlib.h
-       include/vulkan/vulkan_xlib_xrandr.h
+Files: .gitattributes
+       .github/dependabot.yml
+       .github/workflows/*
+       BUILD.gn
+       BUILD.md
+       CMakeLists.txt
+       CONTRIBUTING.md
+       LICENSE.md
+       LICENSES/*
+       Makefile.release
+       README.md
+       SECURITY.md
+       include/*
        registry/apiconventions.py
        registry/cgenerator.py
        registry/generator.py
-       registry/genvk.py
        registry/reg.py
        registry/spec_tools/*
+       registry/stripAPI.py
        registry/video.xml
        registry/vk.xml
        registry/vkconventions.py
+       tests/*
 Copyright: 2018-2019, Collabora, Ltd
-           2022, LunarG, Inc
-           2013-2022, The Khronos Group Inc
+           2015-2023, LunarG, Inc
+           2018-2023, The ANGLE Project Authors
+           2013-2024, The Khronos Group Inc
+           2015-2023, Valve Corporation
 License: Apache-2
 
-Files: cmake/Copyright_cmake.txt
-Copyright: 2000-2018, Kitware, Inc
-License: BSD-3-clause
+Files: CODE_OF_CONDUCT.adoc
+       LICENSES/MIT.txt
+       registry/parse_dependency.py
+Copyright: 2003-2019, Paul McGuire
+           2015-2024, The Khronos Group Inc
+License: Expat
 
 Files: debian/*
 Copyright: 2024, LunarG Inc <johnz@lunarg.com>
@@ -279,6 +268,9 @@ License: BSD-3-clause
  3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
  .
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+Comment: Add the corresponding license text here
 
 License: GPL-3
  GNU GENERAL PUBLIC LICENSE

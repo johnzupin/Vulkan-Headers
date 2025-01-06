@@ -1,3 +1,41 @@
+vulkan-headers (1.4.304.0~rc1-1lunarg24.04-1) noble; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.297
+  * Update for Vulkan-Docs 1.3.298
+  * Update for Vulkan-Docs 1.3.299
+
+  [ Charles Giessen ]
+  * ci: Only run once if pushing to main repo branch
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.300
+
+  [ Charles Giessen ]
+  * build: Disable Vulkan-Module by default
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.3.301
+
+  [ dependabot[bot] ]
+  * build(deps): bump fsfe/reuse-action from 4 to 5
+  * Update for Vulkan-Docs 1.3.302
+
+  [ Shahbaz Youssefi ]
+  * Fix GN include checks
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.303
+  * Add missing validusage.json and fix Makefile.release for new registry structure
+
+  [ John Zupin ]
+  * packaging: debian: update copyright
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.304
+
+ -- john <john@odin>  Mon, 06 Jan 2025 14:35:12 -0700
+
 vulkan-headers (1.3.296.0~rc1-1lunarg24.04-1) noble; urgency=medium
 
   [ Jon Leech ]

@@ -1,3 +1,18 @@
+vulkan-headers (1.4.309.0~rc1-1lunarg24.04-1) noble; urgency=medium
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.305
+  * Update for Vulkan-Docs 1.4.306
+  * Update for Vulkan-Docs 1.4.307
+
+  [ Juan Ramos ]
+  * cmake: Update minimum version to 3.22.1
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.309
+
+ -- john <john@odin>  Tue, 04 Mar 2025 09:36:36 -0700
+
 vulkan-headers (1.4.304.0~rc1-1lunarg24.04-1) noble; urgency=medium
 
   [ Jon Leech ]

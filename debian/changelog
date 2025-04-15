@@ -1,3 +1,33 @@
+vulkan-headers (1.4.312.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Tom Anderson ]
+  * GN build: Define VK_USE_PLATFORM_XLIB_KHR
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.310
+
+  [ Jan Kuhlmann ]
+  * cmake: Rename Vulkan-Module to Vulkan-HppModule
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.311
+
+  [ Jan Kuhlmann ]
+  * integration tests for cxx modules
+  * merged subdirectory tests
+  * minimal compilation setups for Vulkan::Hpp and Vulkan::HppModule
+  * added c++20 workflows for modules in ubuntu and windows
+  * Added licenses and used included headers in minimal examples
+  * fixed linewrap on windows and CXX compiler on ubuntu
+  * replaced minimal example for modules
+  * simplified cpp module to not require function loading
+  * adjusted fnc name
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.312
+
+ -- john <john@odin>  Tue, 15 Apr 2025 14:41:20 -0600
+
 vulkan-headers (1.4.309.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jon Leech ]

@@ -63,7 +63,7 @@ extern "C" __declspec( dllimport ) FARPROC __stdcall GetProcAddress( HINSTANCE h
 #  include <span>
 #endif
 
-static_assert( VK_HEADER_VERSION == 309, "Wrong VK_HEADER_VERSION!" );
+static_assert( VK_HEADER_VERSION == 312, "Wrong VK_HEADER_VERSION!" );
 
 // <tuple> includes <sys/sysmacros.h> through some other header
 // this results in major(x) being resolved to gnu_dev_major(x)
@@ -81,7 +81,7 @@ static_assert( VK_HEADER_VERSION == 309, "Wrong VK_HEADER_VERSION!" );
 #  undef MemoryBarrier
 #endif
 
-// XLib.h defines True/False, which collides with our vk::True/vk::False
+// XLib.h defines True/False, which collides with our VULKAN_HPP_NAMESPACE::True/VULKAN_HPP_NAMESPACE::False
 // ->  undef them and provide some namepace-secure constexpr
 #if defined( True )
 #  undef True
@@ -4951,6 +4951,23 @@ namespace VULKAN_HPP_NAMESPACE
       }
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
+      //=== VK_QCOM_tile_shading ===
+
+      void vkCmdDispatchTileQCOM( VkCommandBuffer commandBuffer ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkCmdDispatchTileQCOM( commandBuffer );
+      }
+
+      void vkCmdBeginPerTileExecutionQCOM( VkCommandBuffer commandBuffer, const VkPerTileBeginInfoQCOM * pPerTileBeginInfo ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkCmdBeginPerTileExecutionQCOM( commandBuffer, pPerTileBeginInfo );
+      }
+
+      void vkCmdEndPerTileExecutionQCOM( VkCommandBuffer commandBuffer, const VkPerTileEndInfoQCOM * pPerTileEndInfo ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkCmdEndPerTileExecutionQCOM( commandBuffer, pPerTileEndInfo );
+      }
+
 #  if defined( VK_USE_PLATFORM_METAL_EXT )
       //=== VK_EXT_metal_objects ===
 
@@ -6095,6 +6112,30 @@ namespace VULKAN_HPP_NAMESPACE
         return ::vkCmdBindDescriptorBufferEmbeddedSamplers2EXT( commandBuffer, pBindDescriptorBufferEmbeddedSamplersInfo );
       }
 
+      //=== VK_NV_external_compute_queue ===
+
+      VkResult vkCreateExternalComputeQueueNV( VkDevice                                   device,
+                                               const VkExternalComputeQueueCreateInfoNV * pCreateInfo,
+                                               const VkAllocationCallbacks *              pAllocator,
+                                               VkExternalComputeQueueNV *                 pExternalQueue ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkCreateExternalComputeQueueNV( device, pCreateInfo, pAllocator, pExternalQueue );
+      }
+
+      void vkDestroyExternalComputeQueueNV( VkDevice                      device,
+                                            VkExternalComputeQueueNV      externalQueue,
+                                            const VkAllocationCallbacks * pAllocator ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkDestroyExternalComputeQueueNV( device, externalQueue, pAllocator );
+      }
+
+      void vkGetExternalComputeQueueDataNV( VkExternalComputeQueueNV             externalQueue,
+                                            VkExternalComputeQueueDataParamsNV * params,
+                                            void *                               pData ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkGetExternalComputeQueueDataNV( externalQueue, params, pData );
+      }
+
       //=== VK_NV_cluster_acceleration_structure ===
 
       void vkGetClusterAccelerationStructureBuildSizesNV( VkDevice                                          device,
@@ -6219,6 +6260,13 @@ namespace VULKAN_HPP_NAMESPACE
         return ::vkGetMemoryMetalHandlePropertiesEXT( device, handleType, pHandle, pMemoryMetalHandleProperties );
       }
 #  endif /*VK_USE_PLATFORM_METAL_EXT*/
+
+      //=== VK_EXT_fragment_density_map_offset ===
+
+      void vkCmdEndRendering2EXT( VkCommandBuffer commandBuffer, const VkRenderingEndInfoEXT * pRenderingEndInfo ) const VULKAN_HPP_NOEXCEPT
+      {
+        return ::vkCmdEndRendering2EXT( commandBuffer, pRenderingEndInfo );
+      }
     };
 
     inline DispatchLoaderStatic & getDispatchLoaderStatic()
@@ -6252,9 +6300,9 @@ namespace VULKAN_HPP_NAMESPACE
     public:
       ObjectDestroy() = default;
 
-      ObjectDestroy( OwnerType                                                   owner,
-                     Optional<const vk::AllocationCallbacks> allocationCallbacks VULKAN_HPP_DEFAULT_ARGUMENT_NULLPTR_ASSIGNMENT,
-                     Dispatch const & dispatch                                   VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) VULKAN_HPP_NOEXCEPT
+      ObjectDestroy( OwnerType                                                                     owner,
+                     Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> allocationCallbacks VULKAN_HPP_DEFAULT_ARGUMENT_NULLPTR_ASSIGNMENT,
+                     Dispatch const & dispatch VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) VULKAN_HPP_NOEXCEPT
         : m_owner( owner )
         , m_allocationCallbacks( allocationCallbacks )
         , m_dispatch( &dispatch )
@@ -6266,7 +6314,7 @@ namespace VULKAN_HPP_NAMESPACE
         return m_owner;
       }
 
-      Optional<const vk::AllocationCallbacks> getAllocator() const VULKAN_HPP_NOEXCEPT
+      Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> getAllocator() const VULKAN_HPP_NOEXCEPT
       {
         return m_allocationCallbacks;
       }
@@ -6285,9 +6333,9 @@ namespace VULKAN_HPP_NAMESPACE
       }
 
     private:
-      OwnerType                               m_owner               = {};
-      Optional<const vk::AllocationCallbacks> m_allocationCallbacks = nullptr;
-      Dispatch const *                        m_dispatch            = nullptr;
+      OwnerType                                                 m_owner               = {};
+      Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> m_allocationCallbacks = nullptr;
+      Dispatch const *                                          m_dispatch            = nullptr;
     };
 
     class NoParent;
@@ -6298,14 +6346,14 @@ namespace VULKAN_HPP_NAMESPACE
     public:
       ObjectDestroy() = default;
 
-      ObjectDestroy( Optional<const vk::AllocationCallbacks> allocationCallbacks,
-                     Dispatch const & dispatch               VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) VULKAN_HPP_NOEXCEPT
+      ObjectDestroy( Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> allocationCallbacks,
+                     Dispatch const & dispatch                                 VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) VULKAN_HPP_NOEXCEPT
         : m_allocationCallbacks( allocationCallbacks )
         , m_dispatch( &dispatch )
       {
       }
 
-      Optional<const vk::AllocationCallbacks> getAllocator() const VULKAN_HPP_NOEXCEPT
+      Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> getAllocator() const VULKAN_HPP_NOEXCEPT
       {
         return m_allocationCallbacks;
       }
@@ -6324,8 +6372,8 @@ namespace VULKAN_HPP_NAMESPACE
       }
 
     private:
-      Optional<const vk::AllocationCallbacks> m_allocationCallbacks = nullptr;
-      Dispatch const *                        m_dispatch            = nullptr;
+      Optional<const VULKAN_HPP_NAMESPACE::AllocationCallbacks> m_allocationCallbacks = nullptr;
+      Dispatch const *                                          m_dispatch            = nullptr;
     };
 
     template <typename OwnerType, typename Dispatch>
@@ -7799,6 +7847,10 @@ namespace VULKAN_HPP_NAMESPACE
   VULKAN_HPP_CONSTEXPR_INLINE auto EXTShaderStencilExportExtensionName = VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto EXTShaderStencilExportSpecVersion   = VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION;
 
+  //=== VK_KHR_shader_bfloat16 ===
+  VULKAN_HPP_CONSTEXPR_INLINE auto KHRShaderBfloat16ExtensionName = VK_KHR_SHADER_BFLOAT16_EXTENSION_NAME;
+  VULKAN_HPP_CONSTEXPR_INLINE auto KHRShaderBfloat16SpecVersion   = VK_KHR_SHADER_BFLOAT16_SPEC_VERSION;
+
   //=== VK_EXT_sample_locations ===
   VULKAN_HPP_CONSTEXPR_INLINE auto EXTSampleLocationsExtensionName = VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto EXTSampleLocationsSpecVersion   = VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION;
@@ -8332,6 +8384,10 @@ namespace VULKAN_HPP_NAMESPACE
   VULKAN_HPP_CONSTEXPR_INLINE auto NVCudaKernelLaunchExtensionName = VK_NV_CUDA_KERNEL_LAUNCH_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto NVCudaKernelLaunchSpecVersion   = VK_NV_CUDA_KERNEL_LAUNCH_SPEC_VERSION;
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
+
+  //=== VK_QCOM_tile_shading ===
+  VULKAN_HPP_CONSTEXPR_INLINE auto QCOMTileShadingExtensionName = VK_QCOM_TILE_SHADING_EXTENSION_NAME;
+  VULKAN_HPP_CONSTEXPR_INLINE auto QCOMTileShadingSpecVersion   = VK_QCOM_TILE_SHADING_SPEC_VERSION;
 
   //=== VK_NV_low_latency ===
   VULKAN_HPP_CONSTEXPR_INLINE auto NVLowLatencyExtensionName = VK_NV_LOW_LATENCY_EXTENSION_NAME;
@@ -8889,6 +8945,10 @@ namespace VULKAN_HPP_NAMESPACE
   VULKAN_HPP_CONSTEXPR_INLINE auto NVRawAccessChainsExtensionName = VK_NV_RAW_ACCESS_CHAINS_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto NVRawAccessChainsSpecVersion   = VK_NV_RAW_ACCESS_CHAINS_SPEC_VERSION;
 
+  //=== VK_NV_external_compute_queue ===
+  VULKAN_HPP_CONSTEXPR_INLINE auto NVExternalComputeQueueExtensionName = VK_NV_EXTERNAL_COMPUTE_QUEUE_EXTENSION_NAME;
+  VULKAN_HPP_CONSTEXPR_INLINE auto NVExternalComputeQueueSpecVersion   = VK_NV_EXTERNAL_COMPUTE_QUEUE_SPEC_VERSION;
+
   //=== VK_KHR_shader_relaxed_extended_instruction ===
   VULKAN_HPP_CONSTEXPR_INLINE auto KHRShaderRelaxedExtendedInstructionExtensionName = VK_KHR_SHADER_RELAXED_EXTENDED_INSTRUCTION_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto KHRShaderRelaxedExtendedInstructionSpecVersion   = VK_KHR_SHADER_RELAXED_EXTENDED_INSTRUCTION_SPEC_VERSION;
@@ -8972,6 +9032,10 @@ namespace VULKAN_HPP_NAMESPACE
   VULKAN_HPP_CONSTEXPR_INLINE auto NVPresentMeteringExtensionName = VK_NV_PRESENT_METERING_EXTENSION_NAME;
   VULKAN_HPP_CONSTEXPR_INLINE auto NVPresentMeteringSpecVersion   = VK_NV_PRESENT_METERING_SPEC_VERSION;
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
+
+  //=== VK_EXT_fragment_density_map_offset ===
+  VULKAN_HPP_CONSTEXPR_INLINE auto EXTFragmentDensityMapOffsetExtensionName = VK_EXT_FRAGMENT_DENSITY_MAP_OFFSET_EXTENSION_NAME;
+  VULKAN_HPP_CONSTEXPR_INLINE auto EXTFragmentDensityMapOffsetSpecVersion   = VK_EXT_FRAGMENT_DENSITY_MAP_OFFSET_SPEC_VERSION;
 
 }  // namespace VULKAN_HPP_NAMESPACE
 
@@ -12193,6 +12257,25 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
+  //=== VK_KHR_shader_bfloat16 ===
+  template <>
+  struct StructExtends<PhysicalDeviceShaderBfloat16FeaturesKHR, PhysicalDeviceFeatures2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceShaderBfloat16FeaturesKHR, DeviceCreateInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
   //=== VK_EXT_sample_locations ===
   template <>
   struct StructExtends<SampleLocationsInfoEXT, ImageMemoryBarrier>
@@ -14073,6 +14156,70 @@ namespace VULKAN_HPP_NAMESPACE
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
+  //=== VK_QCOM_tile_shading ===
+  template <>
+  struct StructExtends<PhysicalDeviceTileShadingFeaturesQCOM, PhysicalDeviceFeatures2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceTileShadingFeaturesQCOM, DeviceCreateInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceTileShadingPropertiesQCOM, PhysicalDeviceProperties2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassTileShadingCreateInfoQCOM, RenderPassCreateInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassTileShadingCreateInfoQCOM, RenderPassCreateInfo2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassTileShadingCreateInfoQCOM, RenderingInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassTileShadingCreateInfoQCOM, CommandBufferInheritanceInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
   //=== VK_NV_low_latency ===
   template <>
   struct StructExtends<QueryLowLatencySupportNV, SemaphoreCreateInfo>
@@ -15665,43 +15812,6 @@ namespace VULKAN_HPP_NAMESPACE
 
   template <>
   struct StructExtends<RenderPassStripeSubmitInfoARM, CommandBufferSubmitInfo>
-  {
-    enum
-    {
-      value = true
-    };
-  };
-
-  //=== VK_QCOM_fragment_density_map_offset ===
-  template <>
-  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, PhysicalDeviceFeatures2>
-  {
-    enum
-    {
-      value = true
-    };
-  };
-
-  template <>
-  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM, DeviceCreateInfo>
-  {
-    enum
-    {
-      value = true
-    };
-  };
-
-  template <>
-  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM, PhysicalDeviceProperties2>
-  {
-    enum
-    {
-      value = true
-    };
-  };
-
-  template <>
-  struct StructExtends<SubpassFragmentDensityMapOffsetEndInfoQCOM, SubpassEndInfo>
   {
     enum
     {
@@ -17404,6 +17514,25 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 
+  //=== VK_NV_external_compute_queue ===
+  template <>
+  struct StructExtends<ExternalComputeQueueDeviceCreateInfoNV, DeviceCreateInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceExternalComputeQueuePropertiesNV, PhysicalDeviceProperties2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
   //=== VK_KHR_shader_relaxed_extended_instruction ===
   template <>
   struct StructExtends<PhysicalDeviceShaderRelaxedExtendedInstructionFeaturesKHR, PhysicalDeviceFeatures2>
@@ -17712,7 +17841,7 @@ namespace VULKAN_HPP_NAMESPACE
   };
 
   template <>
-  struct StructExtends<MemoryBarrierAccessFlags3KHR, MemoryBarrier2>
+  struct StructExtends<MemoryBarrierAccessFlags3KHR, SubpassDependency2>
   {
     enum
     {
@@ -18003,6 +18132,52 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
 #  endif /*VK_ENABLE_BETA_EXTENSIONS*/
+
+  //=== VK_EXT_fragment_density_map_offset ===
+  template <>
+  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetFeaturesEXT, PhysicalDeviceFeatures2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetFeaturesEXT, DeviceCreateInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<PhysicalDeviceFragmentDensityMapOffsetPropertiesEXT, PhysicalDeviceProperties2>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassFragmentDensityMapOffsetEndInfoEXT, SubpassEndInfo>
+  {
+    enum
+    {
+      value = true
+    };
+  };
+
+  template <>
+  struct StructExtends<RenderPassFragmentDensityMapOffsetEndInfoEXT, RenderingEndInfoEXT>
+  {
+    enum
+    {
+      value = true
+    };
+  };
 
 #endif  // VULKAN_HPP_DISABLE_ENHANCED_MODE
 
@@ -19008,6 +19183,11 @@ namespace VULKAN_HPP_NAMESPACE
       PFN_dummy vkCmdCudaLaunchKernelNV_placeholder                           = 0;
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
+      //=== VK_QCOM_tile_shading ===
+      PFN_vkCmdDispatchTileQCOM          vkCmdDispatchTileQCOM          = 0;
+      PFN_vkCmdBeginPerTileExecutionQCOM vkCmdBeginPerTileExecutionQCOM = 0;
+      PFN_vkCmdEndPerTileExecutionQCOM   vkCmdEndPerTileExecutionQCOM   = 0;
+
 #if defined( VK_USE_PLATFORM_METAL_EXT )
       //=== VK_EXT_metal_objects ===
       PFN_vkExportMetalObjectsEXT vkExportMetalObjectsEXT = 0;
@@ -19304,6 +19484,11 @@ namespace VULKAN_HPP_NAMESPACE
       PFN_vkCmdSetDescriptorBufferOffsets2EXT           vkCmdSetDescriptorBufferOffsets2EXT           = 0;
       PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT vkCmdBindDescriptorBufferEmbeddedSamplers2EXT = 0;
 
+      //=== VK_NV_external_compute_queue ===
+      PFN_vkCreateExternalComputeQueueNV  vkCreateExternalComputeQueueNV  = 0;
+      PFN_vkDestroyExternalComputeQueueNV vkDestroyExternalComputeQueueNV = 0;
+      PFN_vkGetExternalComputeQueueDataNV vkGetExternalComputeQueueDataNV = 0;
+
       //=== VK_NV_cluster_acceleration_structure ===
       PFN_vkGetClusterAccelerationStructureBuildSizesNV    vkGetClusterAccelerationStructureBuildSizesNV    = 0;
       PFN_vkCmdBuildClusterAccelerationStructureIndirectNV vkCmdBuildClusterAccelerationStructureIndirectNV = 0;
@@ -19334,6 +19519,9 @@ namespace VULKAN_HPP_NAMESPACE
       PFN_dummy vkGetMemoryMetalHandleEXT_placeholder                         = 0;
       PFN_dummy vkGetMemoryMetalHandlePropertiesEXT_placeholder               = 0;
 #endif /*VK_USE_PLATFORM_METAL_EXT*/
+
+      //=== VK_EXT_fragment_density_map_offset ===
+      PFN_vkCmdEndRendering2EXT vkCmdEndRendering2EXT = 0;
 
     public:
       DispatchLoaderDynamic() VULKAN_HPP_NOEXCEPT                                    = default;
@@ -20473,6 +20661,11 @@ namespace VULKAN_HPP_NAMESPACE
         vkCmdCudaLaunchKernelNV = PFN_vkCmdCudaLaunchKernelNV( vkGetInstanceProcAddr( instance, "vkCmdCudaLaunchKernelNV" ) );
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
+        //=== VK_QCOM_tile_shading ===
+        vkCmdDispatchTileQCOM          = PFN_vkCmdDispatchTileQCOM( vkGetInstanceProcAddr( instance, "vkCmdDispatchTileQCOM" ) );
+        vkCmdBeginPerTileExecutionQCOM = PFN_vkCmdBeginPerTileExecutionQCOM( vkGetInstanceProcAddr( instance, "vkCmdBeginPerTileExecutionQCOM" ) );
+        vkCmdEndPerTileExecutionQCOM   = PFN_vkCmdEndPerTileExecutionQCOM( vkGetInstanceProcAddr( instance, "vkCmdEndPerTileExecutionQCOM" ) );
+
 #if defined( VK_USE_PLATFORM_METAL_EXT )
         //=== VK_EXT_metal_objects ===
         vkExportMetalObjectsEXT = PFN_vkExportMetalObjectsEXT( vkGetInstanceProcAddr( instance, "vkExportMetalObjectsEXT" ) );
@@ -20840,6 +21033,11 @@ namespace VULKAN_HPP_NAMESPACE
         vkCmdBindDescriptorBufferEmbeddedSamplers2EXT =
           PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT( vkGetInstanceProcAddr( instance, "vkCmdBindDescriptorBufferEmbeddedSamplers2EXT" ) );
 
+        //=== VK_NV_external_compute_queue ===
+        vkCreateExternalComputeQueueNV  = PFN_vkCreateExternalComputeQueueNV( vkGetInstanceProcAddr( instance, "vkCreateExternalComputeQueueNV" ) );
+        vkDestroyExternalComputeQueueNV = PFN_vkDestroyExternalComputeQueueNV( vkGetInstanceProcAddr( instance, "vkDestroyExternalComputeQueueNV" ) );
+        vkGetExternalComputeQueueDataNV = PFN_vkGetExternalComputeQueueDataNV( vkGetInstanceProcAddr( instance, "vkGetExternalComputeQueueDataNV" ) );
+
         //=== VK_NV_cluster_acceleration_structure ===
         vkGetClusterAccelerationStructureBuildSizesNV =
           PFN_vkGetClusterAccelerationStructureBuildSizesNV( vkGetInstanceProcAddr( instance, "vkGetClusterAccelerationStructureBuildSizesNV" ) );
@@ -20877,6 +21075,9 @@ namespace VULKAN_HPP_NAMESPACE
         vkGetMemoryMetalHandlePropertiesEXT =
           PFN_vkGetMemoryMetalHandlePropertiesEXT( vkGetInstanceProcAddr( instance, "vkGetMemoryMetalHandlePropertiesEXT" ) );
 #endif /*VK_USE_PLATFORM_METAL_EXT*/
+
+        //=== VK_EXT_fragment_density_map_offset ===
+        vkCmdEndRendering2EXT = PFN_vkCmdEndRendering2EXT( vkGetInstanceProcAddr( instance, "vkCmdEndRendering2EXT" ) );
       }
 
       void init( VULKAN_HPP_NAMESPACE::Device deviceCpp ) VULKAN_HPP_NOEXCEPT
@@ -21680,6 +21881,11 @@ namespace VULKAN_HPP_NAMESPACE
         vkCmdCudaLaunchKernelNV = PFN_vkCmdCudaLaunchKernelNV( vkGetDeviceProcAddr( device, "vkCmdCudaLaunchKernelNV" ) );
 #endif /*VK_ENABLE_BETA_EXTENSIONS*/
 
+        //=== VK_QCOM_tile_shading ===
+        vkCmdDispatchTileQCOM          = PFN_vkCmdDispatchTileQCOM( vkGetDeviceProcAddr( device, "vkCmdDispatchTileQCOM" ) );
+        vkCmdBeginPerTileExecutionQCOM = PFN_vkCmdBeginPerTileExecutionQCOM( vkGetDeviceProcAddr( device, "vkCmdBeginPerTileExecutionQCOM" ) );
+        vkCmdEndPerTileExecutionQCOM   = PFN_vkCmdEndPerTileExecutionQCOM( vkGetDeviceProcAddr( device, "vkCmdEndPerTileExecutionQCOM" ) );
+
 #if defined( VK_USE_PLATFORM_METAL_EXT )
         //=== VK_EXT_metal_objects ===
         vkExportMetalObjectsEXT = PFN_vkExportMetalObjectsEXT( vkGetDeviceProcAddr( device, "vkExportMetalObjectsEXT" ) );
@@ -22013,6 +22219,11 @@ namespace VULKAN_HPP_NAMESPACE
         vkCmdBindDescriptorBufferEmbeddedSamplers2EXT =
           PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT( vkGetDeviceProcAddr( device, "vkCmdBindDescriptorBufferEmbeddedSamplers2EXT" ) );
 
+        //=== VK_NV_external_compute_queue ===
+        vkCreateExternalComputeQueueNV  = PFN_vkCreateExternalComputeQueueNV( vkGetDeviceProcAddr( device, "vkCreateExternalComputeQueueNV" ) );
+        vkDestroyExternalComputeQueueNV = PFN_vkDestroyExternalComputeQueueNV( vkGetDeviceProcAddr( device, "vkDestroyExternalComputeQueueNV" ) );
+        vkGetExternalComputeQueueDataNV = PFN_vkGetExternalComputeQueueDataNV( vkGetDeviceProcAddr( device, "vkGetExternalComputeQueueDataNV" ) );
+
         //=== VK_NV_cluster_acceleration_structure ===
         vkGetClusterAccelerationStructureBuildSizesNV =
           PFN_vkGetClusterAccelerationStructureBuildSizesNV( vkGetDeviceProcAddr( device, "vkGetClusterAccelerationStructureBuildSizesNV" ) );
@@ -22044,6 +22255,9 @@ namespace VULKAN_HPP_NAMESPACE
         vkGetMemoryMetalHandleEXT           = PFN_vkGetMemoryMetalHandleEXT( vkGetDeviceProcAddr( device, "vkGetMemoryMetalHandleEXT" ) );
         vkGetMemoryMetalHandlePropertiesEXT = PFN_vkGetMemoryMetalHandlePropertiesEXT( vkGetDeviceProcAddr( device, "vkGetMemoryMetalHandlePropertiesEXT" ) );
 #endif /*VK_USE_PLATFORM_METAL_EXT*/
+
+        //=== VK_EXT_fragment_density_map_offset ===
+        vkCmdEndRendering2EXT = PFN_vkCmdEndRendering2EXT( vkGetDeviceProcAddr( device, "vkCmdEndRendering2EXT" ) );
       }
 
       template <typename DynamicLoader>

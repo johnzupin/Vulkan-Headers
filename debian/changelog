@@ -1,3 +1,13 @@
+vulkan-headers (1.4.313.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Bruno Cabral ]
+  * ignore Jetbrains config directories
+
+  [ Jon Leech ]
+  * Update for Vulkan-Docs 1.4.313
+
+ -- john <john@odin>  Tue, 29 Apr 2025 09:59:29 -0600
+
 vulkan-headers (1.4.312.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Tom Anderson ]
